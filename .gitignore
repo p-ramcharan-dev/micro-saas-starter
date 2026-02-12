@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.python-version
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+
+# Node
+node_modules/
+
+# SvelteKit
+.svelte-kit/
+build/
+
+# Environment
+.env
+.env.*
+
+# Docker
+*.log
+
+# macOS
+.DS_Store
+
+# Claude Code
+.claude/
