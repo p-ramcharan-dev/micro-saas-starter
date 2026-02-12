@@ -40,8 +40,8 @@ npm run format           # Auto-format with Prettier
 ### Backend (from `backend/`)
 ```bash
 uv sync                  # Install dependencies
-uv run fastapi dev       # Dev server with hot reload (default: localhost:8000)
-uv run fastapi run       # Production server
+uv run fastapi dev app/main.py    # Dev server with hot reload (default: localhost:8000)
+uv run fastapi run app/main.py   # Production server
 uv run pytest            # Run all tests
 uv run pytest tests/test_foo.py::test_bar  # Run single test
 uv run alembic upgrade head               # Apply migrations
