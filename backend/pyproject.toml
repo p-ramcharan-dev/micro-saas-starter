@@ -1,0 +1,33 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Micro-SaaS API backend"
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.18.4",
+    "fastapi>=0.128.8",
+    "pydantic-settings>=2.12.0",
+    "sqlmodel>=0.0.33",
+    "uvicorn>=0.40.0",
+]
+
+[tool.fastapi]
+app = "app.main:app"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.0.2",
+    "pytest-asyncio>=1.3.0",
+    "ruff>=0.15.0",
+]
